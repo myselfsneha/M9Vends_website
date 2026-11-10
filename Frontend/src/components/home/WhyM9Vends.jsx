@@ -1,126 +1,110 @@
-
+const steps = [
+  {
+    number: "01",
+    title: "Understand Requirements",
+    description:
+      "We begin by understanding the product, its dispensing requirements, operating environment and the objectives behind the proposed vending solution.",
+  },
+  {
+    number: "02",
+    title: "Study the Product",
+    description:
+      "We examine product dimensions, packaging, storage needs, handling requirements and the practical considerations involved in dispensing it.",
+  },
+  {
+    number: "03",
+    title: "Concept & Design",
+    description:
+      "We explore suitable machine structures, layouts, storage arrangements and dispensing mechanisms based on the product's requirements.",
+  },
+  {
+    number: "04",
+    title: "Engineering & Development",
+    description:
+      "Mechanical components, electronics, motors, sensors and control systems are considered and developed according to the proposed solution.",
+  },
+  {
+    number: "05",
+    title: "System Integration",
+    description:
+      "Relevant mechanical, electronic, embedded and software elements are brought together as part of the machine development process.",
+  },
+  {
+    number: "06",
+    title: "Testing & Refinement",
+    description:
+      "Where applicable, the developed system can be evaluated against functional requirements, with refinements guided by testing and practical operating considerations.",
+  },
+  {
+    number: "07",
+    title: "Deployment & Support",
+    description:
+      "The development journey can progress towards deployment, with maintenance, servicing and ongoing support considered as part of the solution.",
+  },
+];
 
 export default function WhyM9Vends() {
   return (
-    <section className="py-24 bg-white bg-linear-to-br from-green-100 via-teal-100 to-green-100">
-      <div className="container mx-auto px-6">
+    <section className="overflow-hidden bg-[#F8F5E9] py-20 sm:py-24">
+      <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
 
-        {/* ================= Section 1 – Industry Problem ================= */}
-        <div className="max-w-4xl mx-auto text-center animate-fadeIn">
-          <h2 className="text-4xl font-heavitas text-machineBlue tracking-wide">
-            Why M9Vends
-          </h2>
-
-          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            Indian street food is loved everywhere, but it deserves better hygiene,
-            consistency, and engineered systems. Traditional vending lacks automation,
-            structured workflows, and scalable infrastructure.
-            <br /><br />
-            <span className="font-semibold text-gray-900">
-              M9Vends builds engineered vending platforms designed for real-world street conditions.
+        {/* Section Heading */}
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <span className="mb-4 inline-block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#64816B]">
+              From Concept to Creation
             </span>
+
+            <h2 className="text-3xl font-semibold tracking-[-0.045em] text-[#063D2B] sm:text-4xl lg:text-5xl">
+              How We Engineer
+            </h2>
+          </div>
+
+          <p className="max-w-md text-sm leading-7 text-[#53675A] sm:text-base">
+            Every vending solution begins with understanding the product.
+            Our approach brings the right engineering disciplines together
+            to explore a machine built around its requirements.
           </p>
         </div>
 
+        {/* Seven Engineering Stages */}
+        <div className="relative mt-16 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step) => (
+            <article
+              key={step.number}
+              className="group relative"
+            >
+              {/* Stage Number */}
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#8FA991] bg-[#F8F5E9] text-sm font-semibold text-[#063D2B] transition-all duration-500 group-hover:scale-110 group-hover:bg-[#063D2B] group-hover:text-[#F8F5E9]">
+                {step.number}
+              </div>
 
-        {/* ================= Section 2 – Differentiation Grid ================= */}
-        <div className="grid md:grid-cols-3 gap-8 mt-16 animate-fadeIn ">
+              {/* Stage Information */}
+              <div className="mt-7 border-t border-[#D8DDCE] pt-5 transition-all duration-300 group-hover:border-[#64816B]">
+                <span className="text-[11px] font-semibold tracking-[0.18em] text-[#64816B]">
+                  STAGE {step.number}
+                </span>
 
-          {/* Card 1 */}
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-xl transition m9-card ">
-            <h3 className="font-bold text-xl text-machineBlue">
-              Hygiene-First Engineering
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Semi-automated dispensing, food-grade pipelines, and reduced hand contact.
-            </p>
-          </div>
+                <h3 className="mt-3 text-xl font-semibold tracking-tight text-[#063D2B] sm:text-2xl">
+                  {step.title}
+                </h3>
 
-          {/* Card 2 */}
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-xl transition m9-card">
-            <h3 className="font-bold text-xl text-machineBlue">
-              Consistent Taste System
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Controlled masala-water dispensing and continuous mixing for uniform flavor.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-xl transition m9-card">
-            <h3 className="font-bold text-xl text-machineBlue">
-              Real Street Engineering
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Tested in real vending environments with dust, crowds, and water exposure.
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-xl transition m9-card">
-            <h3 className="font-bold text-xl text-machineBlue">
-              Scalable Platform Design
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Modular architecture for single carts to multi-city vending networks.
-            </p>
-          </div>
-
-          {/* Card 5 */}
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-xl transition m9-card">
-            <h3 className="font-bold text-xl text-machineBlue">
-              Industrial Durability
-            </h3>
-            <p className="mt-2 text-gray-600">
-              MS structure, SS components, alloy wheels, and weather-resistant finish.
-            </p>
-          </div>
-
-          {/* Card 6 */}
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-xl transition m9-card">
-            <h3 className="font-bold text-xl text-machineBlue">
-              Tradition + Technology
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Authentic Indian flavors delivered through modern automation systems.
-            </p>
-          </div>
-
+                <p className="mt-3 text-sm leading-7 text-[#53675A]">
+                  {step.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
 
-
-        {/* ================= Section 3 – Scalability Section ================= */}
-        <div className="grid md:grid-cols-2 gap-12 mt-24 items-center">
-
-          {/* Left Text */}
-          <div>
-            <h3 className="text-2xl font-heavitas text-machineBlue">
-              Built for Scalable Deployment
-            </h3>
-
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              M9Vends systems are engineered as scalable platforms — starting from
-              a single vendor cart to multi-city automated vending infrastructure.
-            </p>
-
-            <ul className="mt-6 space-y-3 text-gray-700">
-              <li>• Single smart cart deployment</li>
-              <li>• Multi-cart organized food hubs</li>
-              <li>• Franchise-ready smart vending networks</li>
-            </ul>
-          </div>
-
-          {/* Right Visual Placeholder */}
-          {/* <div className=" border rounded-xl p-8 text-center">
-            <p className="text-gray-500 font-mono">
-              [Scalability Architecture Diagram Placeholder]
-            </p>
-          </div> */}
-
-        </div>
+        {/* Process Note */}
+        <p className="mt-12 border-t border-[#D8DDCE] pt-5 text-xs leading-6 text-[#64816B]">
+          The stages represent M9VENDS' engineering approach. The actual
+          development process may vary depending on the product, project
+          requirements and stage of development.
+        </p>
 
       </div>
     </section>
   );
 }
-

@@ -1,2 +1,29 @@
+
+# Environment variables and secrets
 .env
+.env.*
+!.env.example
+
+# Dependencies
 node_modules/
+
+# Production build
+dist/
+build/
+
+# Local development
+.DS_Store
+Thumbs.db
+*.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Test and coverage output
+coverage/

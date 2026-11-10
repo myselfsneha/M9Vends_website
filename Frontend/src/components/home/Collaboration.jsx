@@ -1,128 +1,90 @@
-
-
-import aman_gupta from "../../assets/images/Our_collaborations_Aman_Gupta.jpg";
-import anubhav_dubey from "../../assets/images/Our_collaborations_Anubhav_Dubey.jpg";
 import { Link } from "react-router-dom";
 
-export default function Collaborations() {
+const collaborators = [
+  "Aashish Joshi",
+  "Amritanshu Singh",
+  "Sneha Merin Jomon",
+  "Anubha Jain",
+  "Tirthi Jhamar",
+  "Khushi Rathod",
+  "Shivani Parmar",
+  "Ayush Sharma",
+  "Harsh Pawar",
+];
+
+export default function Collaboration() {
   return (
-    <section className="py-24 bg-white bg-linear-to-br from-green-100 via-teal-100 to-green-100">
-      <div className="container mx-auto px-6">
+    <section className="bg-[#F8F5E9] py-20 sm:py-24">
+      <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-20">
 
-        {/* ================= Section 1 – Intro Banner ================= */}
-        <div className="text-center max-w-4xl mx-auto animate-fadeIn">
-          <h1 className="text-4xl font-heavitas text-machineBlue tracking-wide">
-            Collaboration Through Conversations
-          </h1>
+          {/* Introduction */}
+          <div className="max-w-md">
+            <span className="inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#64816B]">
+              <span className="h-px w-8 bg-[#64816B]" />
+              People & Collaboration
+            </span>
 
-          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            At M9Vends, we believe growth comes not only from engineering innovation
-            but also from engaging with industry leaders who have built scalable brands.
-            <br /><br />
-            Our interactions with founders across consumer brands strengthen our vision
-            of structured, scalable, and globally recognized street food automation systems.
-          </p>
-        </div>
-
-
-        {/* ================= Section 2 – Aman Gupta ================= */}
-        <div className="grid md:grid-cols-2 gap-12 mt-20 items-center animate-fadeIn">
-
-          {/* Image */}
-          <div className="bg-gray-100  rounded-xl h-72 flex items-center justify-center bg-linear-to-br from-green-100 to-teal-100 ">
-            <img src={aman_gupta}  alt="Image" class="max-h-full" />
-          </div>
-
-          {/* Text */}
-          <div >
-            <h2 className="text-2xl font-heavitas text-machineBlue">
-              Interaction with Aman Gupta
+            <h2 className="mt-5 text-3xl font-semibold leading-tight tracking-[-0.045em] text-[#063D2B] sm:text-4xl lg:text-5xl">
+              Progress is built together.
             </h2>
-            <p className="text-sm text-gray-500 mt-1">
-              Co-Founder & CMO, boAt
+
+            <p className="mt-5 text-sm leading-7 text-[#53675A] sm:text-base">
+              Ideas grow through conversations, shared knowledge and
+              collaboration. Different perspectives and contributions
+              help shape the journey of developing practical vending
+              and automation solutions.
             </p>
 
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              We had the opportunity to interact with Aman Gupta, Co-Founder of boAt,
-              one of India’s most recognized consumer electronics brands.
-            </p>
-
-            <ul className="mt-4 space-y-2 text-gray-700">
-              <li>• Strong brand positioning</li>
-              <li>• Deep understanding of Indian consumers</li>
-              <li>• Product–market alignment</li>
-              <li>• Scalable operational execution</li>
-            </ul>
-
-            <p className="mt-4 text-gray-700">
-              This reinforced our belief that Indian-origin brands can scale globally
-              when supported by strong systems and execution clarity.
-            </p>
-          </div>
-        </div>
-
-
-        {/* ================= Section 3 – Anubhav Dubey ================= */}
-        <div className="grid md:grid-cols-2 gap-12 mt-24 items-center animate-fadeIn">
-
-          {/* Text */}
-          <div>
-            <h2 className="text-2xl font-heavitas text-machineBlue">
-              Interaction with Anubhav Dubey
-            </h2>
-            <p className="text-sm text-gray-500 mt-1">
-              Founder, Chai Sutta Bar
-            </p>
-
-            <p className="mt-4 text-gray-700 leading-relaxed">
-              We also engaged with Anubhav Dubey, Founder of Chai Sutta Bar — a brand
-              that transformed a traditional tea concept into a structured franchise model.
-            </p>
-
-            <ul className="mt-4 space-y-2 text-gray-700">
-              <li>• Standardization of taste across locations</li>
-              <li>• Strong youth-focused branding</li>
-              <li>• Franchise scalability</li>
-              <li>• Operational consistency</li>
-            </ul>
-
-            <p className="mt-4 text-gray-700">
-              This aligned strongly with M9Vends’ mission of converting traditional
-              street food into organized, scalable systems without losing authenticity.
-            </p>
-          </div>
-
-          {/* Image */}
-          <div className="bg-gray-100 rounded-xl h-72 flex items-center justify-center bg-linear-to-br from-green-100 to-teal-100">
-            <img src={anubhav_dubey} alt="Image" class="max-h-full" />
-          </div>
-        </div>
-
-
-        {/* ================= Section 4 – Strategic Meaning ================= */}
-        <div className="mt-24 max-w-5xl mx-auto text-center animate-fadeIn">
-          <h3 className="text-2xl font-heavitas text-machineBlue">
-            Strategic Meaning for M9Vends
-          </h3>
-
-          <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            These conversations validated M9Vends’ direction: transforming traditional
-            street food into structured, brand-ready, and scalable automation systems.
-            Indian street concepts can become globally recognized brands when backed
-            by engineering systems, operational frameworks, and strong branding.
-          </p>
-        </div>
-
-
-        {/* ================= Section 5 – CTA ================= */}
-        <div className="mt-20 text-center animate-fadeIn">
-          <button className="px-10 py-4 text-black font-bold rounded-xl hover:bg-cyan-700 transition border-2 m9-cta">
-            <Link to="/contact" className="text-black font-bold ">
-              Partner With M9Vends
+            <Link
+              to="/team"
+              className="mt-7 inline-flex items-center gap-3 border-b border-[#64816B] pb-2 text-sm font-semibold text-[#063D2B] transition-colors duration-300 hover:border-[#063D2B]"
+            >
+              Meet Our Team
+              <span aria-hidden="true">↗</span>
             </Link>
-          </button>
-        </div>
+          </div>
 
+          {/* People List */}
+          <div>
+            <div className="flex items-center justify-between border-b border-[#C8D2C2] pb-5">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#64816B]">
+                People Behind the Journey
+              </span>
+
+              <span className="text-xs tabular-nums text-[#64816B]">
+                01 — {String(collaborators.length).padStart(2, "0")}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2">
+              {collaborators.map((person, index) => (
+                <article
+                  key={person}
+                  className={`group flex min-h-[76px] items-center gap-4 border-b border-[#D8DDCE] py-5 transition-all duration-300 hover:pl-2 ${
+                    index % 2 === 0
+                      ? "sm:mr-5 sm:border-r sm:border-[#D8DDCE] sm:pr-5"
+                      : "sm:ml-5 sm:pl-5"
+                  }`}
+                >
+                  <span className="text-[10px] font-semibold tabular-nums text-[#8A9C88] transition-colors duration-300 group-hover:text-[#063D2B]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <h3 className="text-base font-medium tracking-tight text-[#244B38] transition-colors duration-300 group-hover:text-[#64816B] sm:text-lg">
+                    {person}
+                  </h3>
+                </article>
+              ))}
+            </div>
+
+            <p className="mt-6 text-xs leading-6 text-[#748575]">
+              Built through shared knowledge, individual contributions
+              and collaborative effort.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
   );

@@ -1,22 +1,26 @@
-// src/services/application.service.js
+
 import api from "./api";
 
 /**
- * Apply for career (with resume upload)
-//  * @param {Form} form
+ * Submit a career application.
+ * @param {Object} form - Career application details.
+ * @returns {Promise<Object>} Backend response data.
  */
-export const applyForCareer = async (Form) => {
+export const applyForCareer = async (form) => {
   try {
-    const response = await api.post("/career/apply", Form, {
+    const response = await api.post("/career/apply", form, {
       headers: {
-        // "Content-Type": "multipart/form-data",
-        "Content-Type" : "application/json"
+        "Content-Type": "application/json",
       },
     });
 
-    return response.form;
+    return response.data;
   } catch (error) {
-    console.error("Career Application Error:", error.response?.data || error.message);
+    console.error(
+      "Career Application Error:",
+      error.response?.data || error.message
+    );
+
     throw error;
   }
 };

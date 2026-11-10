@@ -1,17 +1,18 @@
+
 import AboutBanner from "../components/about/AboutBanner";
 import AboutStory from "../components/about/AboutStory";
+import FounderTimeline from "../components/about/FounderTimeline";
 import MissionVision from "../components/about/MissionVision";
 import Values from "../components/about/Values";
-import FounderTimeline from "../components/about/FounderTimeline";
 
 export default function About() {
   return (
-    <div>
+    <main>
       <AboutBanner />
       <AboutStory />
+      <FounderTimeline />
       <MissionVision />
       <Values />
-      <FounderTimeline />
-    </div>
+    </main>
   );
 }
